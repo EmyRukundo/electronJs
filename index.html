@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The monitor</title>
+    <link rel="stylesheet" href="https://bootswatch.com/4/cerulean/bootstrap.min.css" />
+</head>
+<body>
+   <div class="container">
+       <h1>the sytem monitor</h1>
+       <div class="output"></div>
+   </div>
+</body>
+<script>
+    let output = `
+      <h2 class="page-header">the App V </h2>
+      <ul class="list-group">
+        <li class="list-group-item">
+            Node: ${process.versions.node}
+            </i>
+            <li class="list-group-item">
+            Chrome: ${process.versions.chrome}
+            </i>
+        </ul>
+    `;
+    document.getElementById('output').innerHTML = output;
+
+</script>
+
+<script>
+    require('./render.js');
+</script>
+</html>
